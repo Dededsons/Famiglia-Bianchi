@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+:root {
+    --color-green: #2e7d32;
+    --color-red: #c62828;
+    --color-white: #ffffff;
+    --color-cream: #f5f5f0;
+    --color-dark: #1b1b1b;
+}
+
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 3px solid var(--color-green);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image {
+    width: 70px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    color: var(--color-red);
+}
+
+.brand-slogan {
+    font-size: 0.9rem;
+    color: #667;
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navigation-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-dark);
+    transition: 0.3s;
+}
+
+.navigation-link:hover {
+    color: var(--color-red);
+}
+
+.navigation-link.active {
+    color: var(--color-green);
+}
+
+.mobile-menu-placeholder {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    background-color: var(--color-cream);
+    padding: 60px 20px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.hero-text-content {
+    max-width: 500px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--color-green);
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    background-color: var(--color-red);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #8e0000;
+}
+
+.about-preview-section {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--color-red);
+}
+
+.section-subtitle {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-paragraph {
+    margin-bottom: 15px;
+}
+
+.secondary-button {
+    text-decoration: none;
+    border: 2px solid var(--color-green);
+    padding: 10px 20px;
+    color: var(--color-green);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    background-color: var(--color-green);
+    color: white;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    color: #777;
+}
+
+.site-footer {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    color: var(--color-red);
+}
+
+.menu-main {
+    padding: 60px 20px;
+}
+
+.menu-hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    color: var(--color-red);
+}
+
+.menu-subtitle {
+    color: #666;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+}
+
+.category-header h3 {
+    font-size: 1.8rem;
+    color: var(--color-green);
+    margin-bottom: 25px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.menu-image-wrapper {
+    position: relative;
+}
+
+.menu-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.75);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.menu-overlay h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.menu-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.menu-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd54f;
+}
+
+.menu-card:hover .menu-overlay {
+    opacity: 1;
+}
+
+.menu-card:hover .menu-image {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.about-hero {
+    background: var(--color-cream);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.family-history {
+    padding: 60px 20px;
+}
+
+.history-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.family-values {
+    background: var(--color-cream);
+    padding: 60px 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.value-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--color-cream);
+}
+
+.contact-section {
+    padding: 60px 20px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.map-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.map-container img {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.badge-popular {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--color-red);
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    z-index: 10;
+    font-weight: bold;
+}
+
